@@ -2,7 +2,7 @@
 import streamlit as st
 import json
 
-# Set page config for a premium look
+# Set page config 
 st.set_page_config(
     page_title="☕ Coffee Shop - Barista Bot",
     page_icon="☕",
