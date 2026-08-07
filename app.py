@@ -10,7 +10,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS to make the header sticky (adapts to light/dark themes)
+# Custom CSS to make the header sticky 
 st.markdown("""
 <style>
     div[data-testid="element-container"]:has(.header-container),
@@ -24,7 +24,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# App Header (using inline styles for the permanent coffee theme look)
+# App Header 
 st.markdown("""
 <div class="header-container" style="text-align: center; padding: 20px; background: linear-gradient(135deg, #8B5E3C, #6F4E37); color: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
     <h1 style="margin: 0; font-size: 2.5rem; font-weight: 700; color: white;">☕ ☕ Coffee Shop</h1>
@@ -33,8 +33,6 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Load Menu for the sidebar
-# [START load_menu]
-# [START load_menu]
 from google.cloud import firestore
 
 try:
@@ -48,8 +46,7 @@ try:
 except Exception as e:
    st.error(f"Error loading menu from Firestore: {e}")
    menu_items = []
-# [END load_menu]
-# [END load_menu]
+
 
 # Sidebar Menu & Configuration
 with st.sidebar:
