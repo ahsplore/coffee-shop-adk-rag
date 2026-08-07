@@ -3,8 +3,7 @@ import json
 
 from google.adk.agents import LlmAgent
 
-# [START get_menu]
-# [START get_menu]
+
 from google import genai
 from google.cloud import firestore
 from google.cloud.firestore_v1.base_vector_query import DistanceMeasure
@@ -49,8 +48,7 @@ def get_menu(query: str) -> str:
        return json.dumps(menu_data)
    except Exception as e:
        return json.dumps({"error": f"Could not retrieve menu: {str(e)}"})
-# [END get_menu]
-# [END get_menu]
+
 
 # Create the barista agent
 barista_agent = LlmAgent(
